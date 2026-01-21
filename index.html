@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Bucin 💕</title>
+    <title>Untuk kamu 💕</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
@@ -273,16 +273,29 @@
         }
 
         .content-box h1 {
-            font-family: 'Lato', sans-serif;
-            color: #ff1744;
-            margin-bottom: 20px;
+            font-family: 'Cooper Black', 'Georgia', serif;
+            color: #fdfdff;
+            -webkit-text-stroke: 1px #0b0b0b;
+            margin-bottom: 10px;
             font-size: clamp(28px, 5vw, 36px);
         }
-
+        .content-box h2 {
+            font-family: 'Cascadia Mono', cursive !important;
+            color: #040404;
+            margin-bottom: 20px;
+            font-size: clamp(16px, 3vw, 20px);
+        }
+        .content-box r {
+            color: #555;
+            line-height: 1.8;
+            font-size: clamp(14px, 2.5vw, 18px);
+            text-align: justify;
+        }
         .content-box p {
             color: #555;
             line-height: 1.8;
             font-size: clamp(14px, 2.5vw, 18px);
+            text-align: justify;
         }
 
         /* Gallery Section */
@@ -298,10 +311,17 @@
 
         .gallery-section h2 {
             font-family: 'Lato', sans-serif;
-            color: #ff1744;
+            color: #dc3281;
             text-align: center;
             margin-bottom: 30px;
             font-size: clamp(24px, 4vw, 32px);
+        }
+        .gallery-section h3 {
+            font-family: 'Cascadia Mono', cursive !important;
+            color: #040404;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: clamp(16px, 3vw, 20px);
         }
 
         .photo-grid {
@@ -360,263 +380,7 @@
             border-radius: 15px;
         }
 
-      /* Book Album Section */
-.book-section {
-    background: linear-gradient(135deg, #e3f2fd 0%, #fce4ec 100%);
-    border-radius: 20px;
-    padding: clamp(30px, 5vw, 60px);
-    max-width: 1200px;
-    width: 100%;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.book-section h2 {
-    font-family: 'Lato', sans-serif;
-    color: #ff1744;
-    margin-bottom: 30px;
-    font-size: clamp(24px, 4vw, 32px);
-}
-
-.book-container {
-    perspective: 2500px;
-    display: inline-block;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.book {
-    width: clamp(300px, 70vw, 600px);
-    height: clamp(400px, 90vw, 450px);
-    position: relative;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    margin: 0 auto;
-}
-
-.book.open {
-    cursor: default;
-}
-
-/* Punggung buku (spine) */
-.book-spine {
-    position: absolute;
-    width: 40px;
-    height: 100%;
-    background: linear-gradient(180deg, #42a5f5 0%, #ec407a 100%);
-    left: 0;
-    top: 0;
-    box-shadow: 
-        inset -5px 0 10px rgba(0,0,0,0.3),
-        5px 0 15px rgba(0,0,0,0.2);
-    border-radius: 5px 0 0 5px;
-    z-index: 1;
-}
-
-.book-spine::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, transparent 50%, rgba(0,0,0,0.2) 100%);
-}
-
-/* Cover depan buku */
-.book-cover {
-    position: absolute;
-    width: calc(100% - 40px);
-    height: 100%;
-    background: linear-gradient(135deg, #64b5f6 0%, #f48fb1 100%);
-    border-radius: 0 10px 10px 0;
-    box-shadow: 
-        5px 5px 30px rgba(0,0,0,0.4),
-        inset 0 0 50px rgba(255,255,255,0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    transform-style: preserve-3d;
-    transform-origin: left;
-    transition: transform 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-    left: 40px;
-    z-index: 10;
-    border: 3px solid rgba(255,255,255,0.3);
-}
-
-.book.open .book-cover {
-    transform: rotateY(-165deg);
-}
-
-/* Efek cahaya pada cover */
-.book-cover::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 50%, rgba(0,0,0,0.1) 100%);
-    border-radius: 0 10px 10px 0;
-    pointer-events: none;
-}
-
-/* Efek bayangan dalam cover */
-.book-cover::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 30px;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, transparent 100%);
-    border-radius: 0;
-}
-
-.book-cover h3 {
-    font-family: 'Lato', sans-serif;
-    color: white;
-    font-size: clamp(28px, 5vw, 42px);
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 2;
-}
-
-.book-cover p {
-    color: white;
-    font-size: clamp(14px, 2.5vw, 18px);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    position: relative;
-    z-index: 2;
-}
-
-/* Cover belakang buku */
-.book-back {
-    position: absolute;
-    width: calc(100% - 40px);
-    height: 100%;
-    background: linear-gradient(135deg, #5fa3d0 0%, #d8577c 100%);
-    right: 0;
-    border-radius: 10px 0 0 10px;
-    box-shadow: 
-        -5px 5px 30px rgba(0,0,0,0.4),
-        inset 0 0 50px rgba(0,0,0,0.1);
-    border: 3px solid rgba(0,0,0,0.1);
-    z-index: 0;
-}
-
-.book-back::before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 30px;
-    height: 100%;
-    background: linear-gradient(270deg, rgba(0,0,0,0.3) 0%, transparent 100%);
-}
-
-/* Halaman-halaman buku */
-.book-pages-container {
-    position: absolute;
-    width: calc(100% - 40px);
-    height: 100%;
-    left: 40px;
-    display: none;
-    z-index: 5;
-}
-
-.book.open .book-pages-container {
-    display: block;
-}
-
-/* Efek tumpukan halaman di samping */
-.book::before {
-    content: '';
-    position: absolute;
-    left: 38px;
-    top: 2px;
-    width: calc(100% - 42px);
-    height: calc(100% - 4px);
-    background: repeating-linear-gradient(
-        0deg,
-        #f5f5f5 0px,
-        #f5f5f5 2px,
-        #e0e0e0 2px,
-        #e0e0e0 3px
-    );
-    border-radius: 0 8px 8px 0;
-    z-index: 2;
-    box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
-}
-
-.page {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, #fffef7 0%, #fffef7 95%, #f5f5eb 100%);
-    box-shadow: 
-        -3px 0 10px rgba(0,0,0,0.1),
-        3px 3px 20px rgba(0,0,0,0.2);
-    padding: clamp(20px, 3vw, 40px);
-    overflow-y: auto;
-    transform-origin: left;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    left: 0;
-    display: none;
-    border-radius: 0 8px 8px 0;
-}
-
-.page.active {
-    display: block;
-    animation: none;
-}
-
-.page.flipping-forward {
-    display: block;
-    animation: flipForward 0.8s ease-in-out forwards;
-    z-index: 20;
-}
-
-.page.flipping-backward {
-    display: block;
-    animation: flipBackward 0.8s ease-in-out forwards;
-    z-index: 20;
-}
-
-@keyframes flipForward {
-    0% {
-        transform: rotateY(0deg);
-        z-index: 20;
-    }
-    50% {
-        transform: rotateY(-90deg);
-        box-shadow: -10px 10px 30px rgba(0,0,0,0.5);
-    }
-    100% {
-        transform: rotateY(-180deg);
-        z-index: 5;
-    }
-}
-
-@keyframes flipBackward {
-    0% {
-        transform: rotateY(-180deg);
-        z-index: 5;
-    }
-    50% {
-        transform: rotateY(-90deg);
-        box-shadow: -10px 10px 30px rgba(0,0,0,0.5);
-    }
-    100% {
-        transform: rotateY(0deg);
-        z-index: 20;
-    }
-}
+     
 
 /* Efek bayangan di tepi halaman */
 .page::before {
@@ -653,117 +417,7 @@
     line-height: 1.8;
 }
 
-.book-controls {
-    display: none;
-    margin-top: 30px;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
 
-.book.open ~ .book-controls {
-    display: flex;
-}
-
-.page-indicator {
-    font-size: clamp(14px, 2.5vw, 16px);
-    color: #666;
-    font-weight: 600;
-    min-width: 60px;
-    text-align: center;
-}
-
-.book-btn {
-    padding: 12px 30px;
-    font-size: clamp(14px, 2.5vw, 16px);
-    font-weight: 600;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    background: linear-gradient(135deg, #64b5f6 0%, #f48fb1 100%);
-    color: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-
-.book-btn:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 7px 20px rgba(0,0,0,0.3);
-}
-
-.book-btn:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-    transform: none;
-}
-
-.close-book-btn {
-    padding: 12px 30px;
-    font-size: clamp(14px, 2.5vw, 16px);
-    font-weight: 600;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    background: linear-gradient(135deg, #ef5350 0%, #ec407a 100%);
-    color: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-
-.close-book-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 7px 20px rgba(0,0,0,0.3);
-}
-
-/* Mobile Responsive untuk Book */
-@media (max-width: 768px) {
-    .book {
-        width: 85vw;
-        height: 65vh;
-    }
-    
-    .book-spine {
-        width: 30px;
-    }
-    
-    .book-cover {
-        left: 30px;
-        width: calc(100% - 30px);
-    }
-    
-    .book-pages-container {
-        left: 30px;
-        width: calc(100% - 30px);
-    }
-    
-    .book::before {
-        left: 28px;
-        width: calc(100% - 32px);
-    }
-    
-    .book.open .book-cover {
-        transform: rotateY(-170deg);
-    }
-    
-    .page {
-        padding: 15px;
-    }
-    
-    .page img {
-        max-height: 45%;
-    }
-}
-
-@media (max-width: 480px) {
-    .book-cover h3 {
-        font-size: 24px;
-    }
-    
-    .book-controls {
-        gap: 10px;
-    }
-}
 
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
@@ -838,7 +492,7 @@
 
   <!-- Lagu di folder yang sama -->
   <audio id="bgm" loop>
-    <source src="lagu.mp3" type="audio/mpeg">
+    <source src="lagu.mp4" type="audio/mpeg">
     Browser kamu tidak mendukung audio.
   </audio>
 
@@ -854,18 +508,18 @@
   </script>
     <canvas id="canvas"></canvas>
     <div id="bigLove">❤</div>
-    <div id="tekanSaya">Pencet Aku</div>
+    <div id="tekanSaya">For You</div>
     <div id="explosionLove">❤</div>
     
     <div id="buttonWrapper">
     <div id="buttonWrapper-inner">
         <div id="buttonContainer">
-            <button id="pacarBtn" class="choice-btn">Pacar Randu</button>
-            <button id="mantanBtn" class="choice-btn">Mantan Randu</button>
+            <button id="pacarBtn" class="choice-btn">Liat ah</button>
+            <button id="mantanBtn" class="choice-btn">Gamau liat</button>
         </div>
     </div>
 </div>
-    <div id="mantanMessage">Gaada ya mantan mantan🤮</div>
+    <div id="mantanMessage">Harus liat yappingan randu</div>
 
     <div id="loveSection">
         <div class="content-box">
@@ -873,16 +527,34 @@
             <img src="foto.jpg" alt="Foto Kita" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23ddd%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23999%22%3EFoto Placeholder%3C/text%3E%3C/svg%3E'">
             
             <!-- GANTI teks ucapan cinta di bawah ini -->
-            <h1>For My Baby❤️</h1>
+            <h1>For The Word Of C❤️</h1>
+            <h2>anjayy, mabar banget fotonya</h2>
             <p>
-                Halo sayang, hehehe :3
-                Aku ngerasa jarang banget ngasih kamu hadiah, jadi aku buat ini untuk kamuuu. First of all, aku mau nyampein terimakasihh banyak karena udah hadir di hidup aku. Aku tau ini kalimat basi tapi, aku beneran bersyukur kamu selalu ada buat aku, kamu gapernah nyerah buat aku, kamu selalu usahain aku, kamu selalu bersikap baik, manis dan sederhana🙁. Kamu selalu sabar dengan sifat aku yang kadang marah, egois, childish dan kadang cuek tanpa sebab (kalo kata kamu aku nonchalant)😎. Kamu cantikkk, sangat cantik, kamu juga perhatian, pengertian, gemesin, dewasa disaat yang tepat, pinter, kamu bisa menghargai aku dengan baik, humoris, dan aku suka semua hal itu💕, aku juga suka saat kamu manja, saat kamu bawel, saat kamu caper ke aku juga gemess bangett,  kamu juga suka ngambek walaupun emang ngambeknya karna aku. Pokonya semua yang dikamu aku sukaaaaa, yang lebih lucunya kalau kadang aku ga peka atau cuek kamu sendiri yang gatahan buat omongin to the poin 😭 apalagi kalo lagi cemburu, kamu cemburuann parahhh tapi aku tetep sukaaa. Kamu juga cantik banget kalo lagi nangiss, lucuuu 😭💕. Hheheh maaf ya suka bikin kamu nangis💖. Sayang, aku tau aku bukan laki laki yang sempurna, aku juga bukan laki laki terbaik yang pernah kamu temuin, kadang aku juga buat kamu marah, kesel dan sedih. Tapi aku akan terus usahain kamu, dan aku usahain buat jadi yang terbaik buat kamu, aku mau belajar aku mau berubah jadi lebih baik. Jangan cape cape sama aku ya? aku butuh kamu, aku udah terbiasa dengan hadirnya kamu di hidup aku. Cantik, terimakasih ya... Aku ngerasa sangat beruntung bisa milikin kamu. Aku sayang sama kamu, aku sangat memuja kamu, aku suka semua yang ada di kamu. Semoga kita bertahan lama yaa, I LOVEE YOUU SO MUCHH💕
+              Happy Birthday, Chika! 🥰🥳
+
+Di hari spesial ini, aku cuma mau doa yang terbaik buat kamu. Semoga kamu selalu sehat, pikiran tenang, dan bahagia terus setiap harinya. Semoga makin pinter, ilmunya makin berkah, dan apa pun yang kamu cita-citakan bisa tercapai.
+
+Soal cantik... jujur aku bingung mau doain apa lagi, soalnya sekarang aja udah lebih dari cukup. Kamu tuh punya mata yang indah banget, beneran deh. Mata kamu selalu kelihatan berbinar, apalagi dengan bulu mata yang panjang dan lentik itu. Iris mata kamu yang kecoklatan dan putih mata yang bersih bikin aku betah lama-lama natap kamu. Cantik banget, aku suka.
+
+Terus, senyum kamu itu manisnya luar biasa. Kayaknya siapapun yang liat kamu senyum, pasti bakal otomatis ikutan senyum juga. Belum lagi rambut kamu yang bagus banget dan kulit kamu yang kelihatan sehat karena kamu rawat dengan baik. Ngelihat kamu tuh rasanya... indah banget, menenangkan.
+
+Semoga ke depannya rezeki kamu makin lancar dan dijauhkan dari hal-hal buruk. Makin rajin ibadahnya, kuliahnya lancar sampai lulus tepat waktu. Dan nanti, kalau udah waktunya, semoga kamu dapet jodoh yang terbaik dalam segala hal—yang bisa bikin kamu merasa cukup, tenang, dan bener-bener dihargai seumur hidup kamu.
+
+I hope this year brings you all the good things that make you feel happier and calmer. Semoga setiap langkah kamu selalu dimudahkan, hati kamu dijaga dari rasa sakit, dan kamu selalu dikelilingi orang-orang tulus yang sayang sama kamu.
+
+You deserve to be treated kindly, to feel loved, and to feel safe being yourself. 🥹🥰 Aku harap hari ini bisa jadi pengingat betapa spesialnya kamu, bukan cuma buat diri kamu sendiri, tapi juga buat aku.
+
+Makasih ya, udah jadi Chika yang baik selama dua tahun ini. Chika yang bawel, yang galak tapi perhatiannya luar biasa, yang manis, yang bisa dewasa tapi kadang clingy juga. Makasih udah sering ngingetin aku, bahkan ngomelin aku kalau aku salah. Makasih juga udah bantu aku lepas dari masa-masa sulit dan hal-hal toxic dulu.
+
+Intinya, makasih banyak ya cantik... buat semua warna yang udah kamu kasih di hidup aku. Semoga kita bisa sama-sama terus buat tumbuh jadi lebih baik lagi.
+
+Once again, happy birthday to you, bebek jeyekk mesekk bayii. Wishing you a beautiful year ahead! 👏🏻✨
             </p>
         </div>
 
         <!-- Gallery Section -->
         <div class="gallery-section">
-            <h2>Kita Di Roblox📸 & Chat Lucu Dari Kamu 💬</h2>
+            <h2>the sweetness of the sweet🥰</h2>
             <div class="photo-grid">
                 <!-- GANTI foto1.jpg, foto2.jpg, dst dengan file foto Anda -->
                 <div class="photo-item">
@@ -900,108 +572,19 @@
                 <div class="photo-item">
                     <img src="foto5.jpg" alt="Kenangan 5" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22250%22%3E%3Crect fill=%22%23c5e1a5%22 width=%22300%22 height=%22250%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%23666%22%3EFoto 5%3C/text%3E%3C/svg%3E'">
                 </div>
-                <div class="photo-item">
-                    <img src="foto6.jpg" alt="Kenangan 1" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22250%22%3E%3Crect fill=%22%23e1bee7%22 width=%22300%22 height=%22250%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%23666%22%3EFoto 1%3C/text%3E%3C/svg%3E'">
-                </div>
-                <div class="photo-item">
-                    <img src="foto7.jpg" alt="Kenangan 2" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22250%22%3E%3Crect fill=%22%23b3e5fc%22 width=%22300%22 height=%22250%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%23666%22%3EFoto 2%3C/text%3E%3C/svg%3E'">
-                </div>
-                <div class="photo-item">
-                    <img src="foto8.jpg" alt="Kenangan 3" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22250%22%3E%3Crect fill=%22%23ffccbc%22 width=%22300%22 height=%22250%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%23666%22%3EFoto 3%3C/text%3E%3C/svg%3E'">
-                </div>
-                <div class="photo-item">
-                    <img src="foto9.jpg" alt="Kenangan 4" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22250%22%3E%3Crect fill=%22%23f8bbd0%22 width=%22300%22 height=%22250%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%23666%22%3EFoto 4%3C/text%3E%3C/svg%3E'">
-                </div>
-                <div class="photo-item">
-                    <img src="fotoo.jpg" alt="Kenangan 5" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22250%22%3E%3Crect fill=%22%23c5e1a5%22 width=%22300%22 height=%22250%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%23666%22%3EFoto 5%3C/text%3E%3C/svg%3E'">
-                </div>
+               
             </div>
-
-
-       <!-- Book Album Section -->
-<div class="book-section">
-    <h2>Album 📖</h2>
-    <p style="color: #666; margin-bottom: 30px; font-size: clamp(14px, 2.5vw, 16px);">Klik buku untuk membuka album spesial ❤️</p>
-    
-    <div class="book-container">
-        <div class="book" id="bookAlbum">
-            <div class="book-spine"></div>
-            <div class="book-back"></div>
-            <div class="book-cover">
-                <h3>Yang Lucu Lucu</h3>
-                <p>💕</p>
-                <p style="margin-top: 20px; font-size: clamp(12px, 2vw, 14px);">Klik untuk membuka</p>
-            </div>
-            <div class="book-pages-container">
-                <!-- Page 1 -->
-                <div class="page active" data-page="1">
-                    <img src="book1.jpg" alt="Halaman 1" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23e1f5fe%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23999%22%3EHalaman 1%3C/text%3E%3C/svg%3E'">
-                    <h4>Foto kesuakaan akuu 💕</h4>
-                    <p>Foto penculik anak anak, aku sukaaa lucu banget gemesinnn 😭. waktu itu kamu bilang nungguin sambil jongkok, aku sedih dikit bikin kamu nunggu. maaf ya cintakuuu, kamu beneran lucu bangett. aku suka foto ini karena aku bisa kasih sesuatu buat kamu buat pertama kalinya, walau emang ga seberapa😊💖</p>
-                </div>
-
-                <!-- Page 2 -->
-                <div class="page" data-page="2">
-                    <img src="book2.jpg" alt="Halaman 2" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23fce4ec%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23999%22%3EHalaman 2%3C/text%3E%3C/svg%3E'">
-                    <h4>Chat pertamaa</h4>
-                    <p>Kamu dari dulu suka banget ledekin ava aku yang ganteng dan hijau itu. padahal disitu peletnya. hijau hijau gini dapet yang kinyis kinyis bossssss</p>
-                </div>
-
-                <!-- Page 3 -->
-                <div class="page" data-page="3">
-                    <img src="book3.jpg" alt="Halaman 3" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23fff9c4%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23999%22%3EHalaman 3%3C/text%3E%3C/svg%3E'">
-                    <h4>WOWWWWWWW</h4>
-                    <p>woww omegotttttt, siapa ini cuyyyyy??!!!! cantiikkk bangett liattt!!! pipinya gemesinn bangettt, matanya cantikkk, kulitnya bagusss, keimutann  tiadaa taraaaa</p>
-                </div>
-
-                <!-- Page 4 -->
-                <div class="page" data-page="4">
-                    <img src="book4.jpg" alt="Halaman 4" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23c8e6c9%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23999%22%3EHalaman 4%3C/text%3E%3C/svg%3E'">
-                    <h4>Duniakuu banjir🌍</h4>
-                    <p>Si cengenggg, gampang banget nangissnyaa. tapi setiap nangis gemesinnnn bangettt, membuat kecintaannn. mau gigit gigit cuyyyyy</p>
-                </div>
-
-                <!-- Page 5 -->
-                <div class="page" data-page="5">
-                    <img src="book5.jpg" alt="Halaman 5" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f8bbd0%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23999%22%3EHalaman 5%3C/text%3E%3C/svg%3E'">
-                    <h4>Minumm apatuuuu???</h4>
-                    <p>Maaf ya semesta indahnya diambil ceweku semuaa, soalnya selain indah dia doang semstakuu. anjaaayyyy elabanggggggg</p>
-                </div>
-
-                <!-- Page 6 
-                <div class="page" data-page="6">
-                    <img src="book6.jpg" alt="Halaman 6" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23b39ddb%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23999%22%3EHalaman 6%3C/text%3E%3C/svg%3E'">
-                    <h4>Selamanya Bersama 💕</h4>
-                    <p>Kamu dan aku, bersama selamanya. Tidak ada yang bisa memisahkan kita. Cinta kita adalah cinta yang abadi, indah, dan tak tergantikan.</p>
-                </div>
-
-                 Tambahan Halaman 7-10 
-                <div class="page" data-page="7">
-                    <img src="book7.jpg" alt="Halaman 7" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23ffccbc%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23999%22%3EHalaman 7%3C/text%3E%3C/svg%3E'">
-                    <h4>Kenangan Manis 🍰</h4>
-                    <p>Setiap kenangan manis bersama kamu tersimpan rapi di hatiku. Dari tawa hingga air mata bahagia, semuanya berharga bagiku.</p>
-                </div>
-
-                <div class="page" data-page="8">
-                    <img src="book8.jpg" alt="Halaman 8" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23b2dfdb%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23999%22%3EHalaman 8%3C/text%3E%3C/svg%3E'">
-                    <h4>Dukungan Tanpa Henti 🤝</h4>
-                    <p>Terima kasih sudah selalu mendukungku dalam setiap langkah. Kamu adalah kekuatan terbesar dalam hidupku.</p>
-                </div>
-
-                <div class="page" data-page="9">
-                    <img src="book9.jpg" alt="Halaman 9" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f0f4c3%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23999%22%3EHalaman 9%3C/text%3E%3C/svg%3E'">
-                    <h4>Impian Bersama 🌟</h4>
-                    <p>Kita punya banyak impian yang akan kita wujudkan bersama. Aku tak sabar menjalani setiap hari bersamamu.</p>
-                </div>
-
-                <div class="page" data-page="10">
-                    <img src="book10.jpg" alt="Halaman 10" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23ffebee%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23999%22%3EHalaman 10%3C/text%3E%3C/svg%3E'">
-                    <h4>Cinta Abadi ♾️</h4>
-                    <p>Cinta kita adalah cinta yang abadi, melampaui ruang dan waktu. Selamanya, hanya kamu dan aku. I Love You! ❤️</p>
-                </div>-->
-            </div>
-        </div>
+             <h3>Something I wrote from the depth of my heart. Here’s a little yapping for you ❤️</h3>
+             <div class="drive-link">
+        <a href="https://drive.google.com/file/d/1sdf8gHDxmVzJS8KwTU67mH7Fl3TfXDby/view?usp=sharing"
+           target="_blank" rel="noopener noreferrer">
+            📄 Read what I wrote here
+        </a>
     </div>
+            </div>
+
+
+     
     <!-- Video Section -->
             <div class="video-section">
                 <p>💕 Video special untuk kamu, cintaku 💕</p>
@@ -1014,12 +597,7 @@
                 </div>
             </div>
         </div>
-    <div class="book-controls">
-        <button class="book-btn" id="prevPage">◄ Sebelumnya</button>
-        <span class="page-indicator" id="pageIndicator">1 / 10</span>
-        <button class="book-btn" id="nextPage">Selanjutnya ►</button>
-        <button class="close-book-btn" id="closeBook">Tutup Buku</button>
-    </div>
+   
 </div>
 
     <script>
